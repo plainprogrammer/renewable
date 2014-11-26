@@ -1,5 +1,6 @@
 # Renewable
 
+[![Gem Version](https://badge.fury.io/rb/renewable.svg)](http://badge.fury.io/rb/renewable)
 [![Code Climate](https://codeclimate.com/github/plainprogrammer/renewable/badges/gpa.svg)](https://codeclimate.com/github/plainprogrammer/renewable)
 [![Build Status](https://travis-ci.org/plainprogrammer/renewable.svg)](https://travis-ci.org/plainprogrammer/renewable)
 [![Test Coverage](https://codeclimate.com/github/plainprogrammer/renewable/badges/coverage.svg)](https://codeclimate.com/github/plainprogrammer/renewable)

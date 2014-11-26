@@ -1,4 +1,4 @@
-require "renewable/version"
+require 'renewable/version'
 
 module Renewable
   # Your code goes here...

@@ -1,5 +1,8 @@
 # Renewable
 
+[![Code Climate](https://codeclimate.com/github/plainprogrammer/renewable/badges/gpa.svg)](https://codeclimate.com/github/plainprogrammer/renewable)
+[![Test Coverage](https://codeclimate.com/github/plainprogrammer/renewable/badges/coverage.svg)](https://codeclimate.com/github/plainprogrammer/renewable)
+
 Renewable provides means to have objects that are frozen by default. The benefit
 of this is that it pushes the developer in the direction of a more Functional
 style of programming that is safer in multi-threaded situations, but maintains

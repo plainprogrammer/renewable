@@ -10,15 +10,22 @@ module Renewable
     after_freeze(attributes, options)
   end
 
+  def renew(attributes = {}, options = {})
+    merged_attributes = self.renewable_attributes.merge(attributes)
+    merged_options = self.renewable_options.merge(options)
+
+    self.class.new(merged_attributes, merged_options)
+  end
+
   protected
 
-  # def renewable_attributes
-  #   @renwable_attributes
-  # end
+  def renewable_attributes
+    @renewable_attributes
+  end
 
-  # def renewable_options
-  #   @renwable_options
-  # end
+  def renewable_options
+    @renewable_options
+  end
 
   private
 
@@ -31,11 +38,11 @@ module Renewable
       self.instance_variable_set(:"@#{name}", value)
     end
 
-    #@renwable_attributes = attributes
+    @renewable_attributes = attributes
   end
 
   def renewable_process_options(options)
-    #@renwable_options = options
+    @renewable_options = options
   end
 
   def before_freeze(attributes, options)

@@ -1,7 +1,7 @@
 require 'date'
 require 'renewable'
 
-class PersonA < Renewable::Object
+class InheritedPerson < Renewable::Object
   attr_accessor :name, :birth_date
 
   def age

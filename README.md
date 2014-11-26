@@ -108,11 +108,41 @@ end
 
 ### Mutators (Methods that change stuff)
 
-TODO: Write this section.
+*Don't write them!* This is where the idea of being more Functional comes into
+play. Methods that modify the internal state of an object make it harder to
+ensure the thread-safety of your code. But, so much of Object-Oriented
+Programming is directly tied to mutation. Thankfully, with Renewable objects
+that functionality is explicitly not available.
 
-### #renew
+Instead, Renewable provides a method called `renew` that allows you to achieve
+functionality similar to mutation, but without the same side effects. Instead
+`renew` returns a completely new instance of the object, and you get control
+over exactly what aspects of internal state change for the new instance.
 
-TODO: Write this section.
+The major downside to this is that you have to expect your mutator methods to
+return a new instance, never just a value or nil. But, that's a pretty easy
+idea to get used to.
+
+#### #renew
+
+The `renew` method is what you use to move beyond your frozen object, it accepts
+two hashes: `attributes` and `options`. In that way, it is like calling `new`,
+but it starts with the state of your frozen object and applies the changes you
+specify.
+
+```ruby
+class Person
+  #...
+
+  def change_name(name)
+    self.renew(name: name.to_s)
+  end
+end
+```
+
+That really is as simple as `renew` is in many cases. Because it accepts the
+`attributes` and `options` arguments and calls `initialize` under the hood you
+still get all the functionality of the callback handling when renewing objects.
 
 ## Contributing
 

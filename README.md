@@ -1,6 +1,7 @@
 # Renewable
 
 [![Code Climate](https://codeclimate.com/github/plainprogrammer/renewable/badges/gpa.svg)](https://codeclimate.com/github/plainprogrammer/renewable)
+[![Build Status](https://travis-ci.org/plainprogrammer/renewable.svg)](https://travis-ci.org/plainprogrammer/renewable)
 [![Test Coverage](https://codeclimate.com/github/plainprogrammer/renewable/badges/coverage.svg)](https://codeclimate.com/github/plainprogrammer/renewable)
 
 Renewable provides means to have objects that are frozen by default. The benefit

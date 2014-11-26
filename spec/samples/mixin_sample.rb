@@ -1,7 +1,7 @@
 require 'date'
 require 'renewable'
 
-class Person
+class PersonB
   include ::Renewable
 
   attr_accessor :name, :birth_date

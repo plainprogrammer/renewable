@@ -3,11 +3,11 @@ require 'samples/mixin_sample'
 RSpec.describe Renewable do
   context 'used as a mixin' do
     it 'initializes to a frozen object' do
-      expect(Person.new(birth_date: '1972-06-13').frozen?).to eq(true)
+      expect(PersonB.new(birth_date: '1972-06-13').frozen?).to eq(true)
     end
 
     it 'assigns all attributes' do
-      person = Person.new(name: 'John',
+      person = PersonB.new(name: 'John',
                           birth_date: '1972-06-13',
                           hair_color: 'Brown')
 
@@ -18,19 +18,19 @@ RSpec.describe Renewable do
 
     it 'runs process_arguments callback' do
       expect {
-        Person.new({}, {raise_process_arguments: true})
+        PersonB.new({}, {raise_process_arguments: true})
       }.to raise_error(ArgumentError, 'entered process_arguments with raise option')
     end
 
     it 'runs before_freeze callback' do
       expect {
-        Person.new({}, {raise_before_freeze: true})
+        PersonB.new({}, {raise_before_freeze: true})
       }.to raise_error(ArgumentError, 'entered before_freeze with raise option')
     end
 
     it 'runs after_freeze callback' do
       expect {
-        Person.new({}, {raise_after_freeze: true})
+        PersonB.new({}, {raise_after_freeze: true})
       }.to raise_error(ArgumentError, 'entered after_freeze with raise option')
     end
   end
